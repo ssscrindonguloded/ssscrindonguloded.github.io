@@ -1,0 +1,152 @@
+body{
+    background-color: rgb(66, 5, 5);
+    margin: 0;
+}
+
+h1{
+    margin-bottom: 100px;
+}
+
+
+
+h1, h2, h3{
+    color: rgb(224, 216, 216);
+    font-family: "Inconsolata", monospace;
+    text-align: center;
+    margin-top: 70px;
+}
+
+p{
+    text-align: center;
+    color: rgb(190, 190, 190);
+    font-family: "Marcellus", serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(49, 9, 9);
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: rgb(190, 190, 190);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+  
+li a:hover {
+    background-color: #722b2b;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#colonne1 {
+    padding: 20px;
+    border: 3px solid #caaaaa;
+    margin-right: 25px;
+    background-color: rgb(224, 216, 216);
+    border-radius: 25px;
+}
+
+#colonne2{
+    padding:20px;
+    border: 3px solid rgb(102, 17, 17);
+    margin-left:25px;
+    background-color: #722b2b;
+    border-radius: 25px;
+    width: 350px;
+}
+
+#moi{
+    height: 400px;
+}
+
+.retex1{
+    width:500px;
+    padding:20px;
+    border: 3px solid rgb(102, 17, 17);
+    margin-left:25px;
+    margin-bottom: 20px;
+    background-color: #722b2b;
+    border-radius: 25px;
+    
+}
+
+.retex2{
+    width:500px;
+    padding:20px;
+    border: 3px solid #caaaaa;
+    margin-left:25px;
+    margin-bottom: 20px;
+    background-color: rgb(224, 216, 216);
+    border-radius: 25px;
+    
+}
+
+.retex1:hover, .retex2:hover{
+    filter: brightness(50%);
+}
+
+/* Add this to your existing style.css file */
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent background for better readability */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.zoomed {
+    transform: scale(1.5); /* You can adjust the scale factor to change the level of zoom */
+    transition:ease 0.5s;
+    position: absolute;
+}
+
+button{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 15px;
+    background-color: #722b2b;
+    color: rgb(224, 216, 216);
+    font-family: "Inconsolata", monospace;
+    font-size: large;
+    border:2px solid #caaaaa;
+}
+
+#mentions{
+    background-color: rgb(49, 9, 9);
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+}
+
+#mentions h2{
+    margin-top: 30px;
+}
+
+.mentionLien:hover {
+    filter: brightness(50%);
+}
+
+   
+
+
+
+
+
