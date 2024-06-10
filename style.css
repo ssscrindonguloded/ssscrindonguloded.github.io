@@ -99,20 +99,20 @@ li a:hover {
     filter: brightness(50%);
 }
 
-/* Add this to your existing style.css file */
+
 .image-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent background for better readability */
+    background-color: rgba(255, 255, 255, 0.7); 
     padding: 10px;
     border-radius: 5px;
     font-size: 14px;
 }
 
 .zoomed {
-    transform: scale(1.5); /* You can adjust the scale factor to change the level of zoom */
+    transform: scale(2); 
     transition:ease 0.5s;
     position: absolute;
 }
@@ -142,6 +142,25 @@ button{
 
 .mentionLien:hover {
     filter: brightness(50%);
+}
+
+#imgFixe {
+    position: fixed;
+    bottom: 0; /* Positionner en haut, changer la valeur pour ajuster */
+    right: 0; /* Positionner à gauche, changer la valeur pour ajuster */
+    z-index: 1000; /* Assurez-vous que l'image est au-dessus des autres éléments */
+}
+
+#imgFixe img {
+    border: rgb(224, 216, 216) 5px solid;
+    border-radius: 10px;
+    width: 100px; /* Ajustez la taille de l'image selon vos besoins */
+    height: auto; /* Conserve les proportions de l'image */
+}
+
+#chantier{
+    width: 250px;
+    
 }
 
    
