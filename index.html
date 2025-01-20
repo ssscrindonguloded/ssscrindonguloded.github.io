@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Sarah Duluc</title>
-  <link href="dist\style.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  
 
 </head>
 
-<body>
-    <header id="home" class="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md">
+<body class="bg-red-950 text-neutral-300 p-0 m-0">
+    <header id="home" class="lg:px-16 px-4 bg-neutral-900 flex flex-wrap items-center py-4 shadow-md">
         <div class="flex-1 flex justify-between items-center">
             <a href="#" class="text-xl">Portfolio</a>
         </div>
         <label for="menu-toggle" class="pointer-cursor md:hidden block">
-          <svg class="fill-current text-gray-900"
+          <svg class="fill-current text-neutral-300"
             xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-            <title>menu</title>
+            <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
           </svg>
         </label>
         <input class="hidden" type="checkbox" id="menu-toggle" />
         <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
             <nav>
-                <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                <ul class="md:flex items-center justify-between text-base text-neutral-300 pt-4 md:pt-0">
                     <li><a class="md:p-4 py-3 px-0 block" href="#home">Accueil</a></li>
                     <li><a class="md:p-4 py-3 px-0 block" href="#projets">Projets</a></li>
                     <li><a class="md:p-4 py-3 px-0 block" href="#formation">Formation</a></li>
@@ -35,20 +37,9 @@
         </div>
     </header>
 
-    <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio</title>
-  <!-- Inclusion de Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 text-gray-900">
 
- 
   <!-- Section Présentation -->
-  <section id="presentation" class="py-20 bg-white">
+  <section id="presentation" class="py-20 ">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-3xl font-semibold mb-4">Présentation</h2>
       <p class="text-lg leading-relaxed">
@@ -60,57 +51,125 @@
   </section>
 
   <!-- Section Projets -->
-  <section id="projets" class="py-20 bg-gray-50">
+  <div class="container mx-auto py-4">
+
+
+    <script src="javasript.js"></script>
+    
+
+
+  <section id="projets" class="py-20 pt-10 border-t-2 border-black">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-3xl font-semibold mb-8 text-center">Projets</h2>
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Tout voir</button>
+        <button class="btn" onclick="filterSelection('java')"> Java</button>
+        <button class="btn" onclick="filterSelection('csharp')"> C#</button>
+        <button class="btn" onclick="filterSelection('JavaScript')"> JavaScript</button>
+        <button class="btn" onclick="filterSelection('html')"> HTML</button>
+        <button class="btn" onclick="filterSelection('css')"> CSS</button>
+        <button class="btn" onclick="filterSelection('C')"> C</button>
+        <button class="btn" onclick="filterSelection('bd')"> BD</button>
+        <button class="btn" onclick="filterSelection('python')"> Python</button>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+
         <!-- Projet 1 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="filterDiv JavaScript html css bg-white rounded-lg shadow-md overflow-hidden">
           <img src="img/js.png" alt="Site web interractif" class="w-full h-56 object-cover">
           <div class="p-6">
-            <p class="text-gray-600 mb-4">
-              Ce projet réalisé en première année consistait à reproduire le fonctionnement de r/place sur Reddit. Si vous ne conaissez pas, il s'agit d'un projet collaboratif consistant à poser des pixels, afin de réaliser des illustrations par exemple. Durant ce projet, j'ai consolidé mes conaissances sur JavaScript et j'ai appris à gérer une API afin de mettre à jour le tableau de pixels dès qu'un étudiant le modifiait. C'est jusque là mon projet préféré de mes études en informatique puisque nous avons pu lier le coté amusant et créatif de la pixel war avec le web.
-            </p>
-            <a href="projJS.html" class="text-blue-500 hover:underline">Voir le projet</a>
+            <a href="projJS.html" class="text-blue-500 hover:underline">Voir plus ></a>
           </div>
         </div>
         <!-- Projet 2 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="filterDiv java bg-white rounded-lg shadow-md overflow-hidden">
           <img src="img/towa.png" alt="Jeu de plateau et IA" class="w-full h-56 object-cover">
           <div class="p-6">
             <p class="text-gray-600 mb-4">
               Towa est un jeu de plateau où j'ai du implémenter les règles et contraintes afin de rendre le jeu jouable.
               Dans une seconde partie, nous avons du coder en binome une IA pour jouer à notre place. Tous les soirs, une compétition entre les IA des étudiants et enseignants était réalisée et le lendemain matin nous avions les résultats. J'ai aimé ce projet pour son aspect compétitif mais aussi parce que nous avons pu développer en Java et avons appris à automatiser une partie avec nos IA.
             </p>
-            <a href="towa.html" class="text-blue-500 hover:underline">Voir le projet</a>
+            <a href="towa.html" class="text-blue-500 hover:underline">Voir plus ></a>
           </div>
         </div>
         <!-- Projet 3 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="filterDiv csharp bg-white rounded-lg shadow-md overflow-hidden">
           <img src="img/unideck.png" alt="Projet 3" class="w-full h-56 object-cover">
           <div class="p-6">
             <p class="text-gray-600 mb-4">
               Ce projet réalisé en binome se centrait sur le développement d'une application de jeu de cartes. Nous avons pu consolider nos connaissances en programmation orientée objet et nous avons rendu, à la fin un guide de conception détaillant ce que nous avions fait. Ce projet était assez différent des autres puisqu'il était plutot centré sur l'explication du code.
             </p>
-            <a href="unideck.html" class="text-blue-500 hover:underline">Voir le projet</a>
+            <a href="unideck.html" class="text-blue-500 hover:underline">Voir plus ></a>
           </div>
         </div>
+        <!-- Projet 4-->
+        <div class="filterDiv csharp python bd bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="img/js.png" alt="Site web interractif" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">
+              projetfins2
+            </p>
+            <a href="projetS2.html" class="text-blue-500 hover:underline">Voir plus ></a>
+          </div>
+        </div>
+        <!-- Projet 5-->
+        <div class="filterDiv html JavaScript css bd bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="img/js.png" alt="Site web interractif" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">
+              projet fin s3
+            </p>
+            <a href="projetS3.html" class="text-blue-500 hover:underline">Voir plus ></a>
+          </div>
+        </div>
+        <!-- Projet 6-->
+        <div class="filterDiv java bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="img/js.png" alt="Site web interractif" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">
+              labyrinthe 
+            </p>
+            <a href="labyrinthe.html" class="text-blue-500 hover:underline">Voir plus ></a>
+          </div>
+        </div>
+        <!-- Projet 7-->
+        <div class="filterDiv C bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="img/js.png" alt="Site web interractif" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">
+              minishell            
+            </p>
+            <a href="minishell.html" class="text-blue-500 hover:underline">Voir plus ></a>
+          </div>
+        </div>
+        <!-- Projet 8-->
+        <div class="filterDiv python bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="img/js.png" alt="Site web interractif" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">
+              minirsa            
+            </p>
+            <a href="minirsa.html" class="text-blue-500 hover:underline">Voir plus ></a>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </section>
+  </div>
 
   <!-- Section Formation -->
-  <section id="formation" class="py-20 bg-white">
+  <section id="formation" class="py-20 pt-10 border-t-2 border-black">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-3xl font-semibold mb-8 text-center">Formation</h2>
       <div class="space-y-6">
         <!-- Formation 1 -->
         <div class="flex items-start">
-          <div class="flex-shrink-0">
-          </div>
           <div class="ml-4">
             <h3 class="text-xl font-semibold">BUT informatique</h3>
-            <p class="text-gray-600">Université de Bordeaux - IUT de Gradignan • 2023-2026</p>
+            <p class="text-neutral-400">Université de Bordeaux - IUT de Gradignan • 2023-2026</p>
             <p class="mt-2">
               Durant ma formation, j'étudie principalement le développement d'applications. Nous avons déjà étudié et pratiqué avec du Java principalement mais aussi du C#. Nous utilisons aussi Python et apprenons le web, en deuxième année nous avons travaillé avec Symfony par exemple.
               Nous n'avons pas seulement des enseignements liés à l'informatique, nous avons aussi des cours de gestion où nous apprenons la méthodologie SCRUM, des cours d'anglais, de communication ou de mathématiques. Nous disposons également d'un cursus international, dont je fais partie. Cette classe nous permet d'avoir des enseignements en anglais et de partir à l'étranger durant nos études.
@@ -125,10 +184,10 @@
  
 
 <!-- Section Contact -->
-<section id="contact" class="py-20 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-4">
+<section id="contact" class="py-15 pb-10 bg-neutral-900 pt-10 border-t-2 border-neutral-900">
+    <div class="max-w-4xl mx-auto px-4 ">
       <h2 class="text-3xl font-semibold mb-8 text-center">Contact</h2>
-      <div class="bg-white shadow-md rounded-lg px-8 py-6">
+      <div class="bg-gray-100 shadow-md rounded-lg px-8 py-6">
         <!-- Adresse e-mail -->
         <div class="flex items-center mb-4">
           <div class="flex-shrink-0 text-blue-500">
