@@ -7,14 +7,15 @@
   <title>Portfolio | Sarah Duluc</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
-  
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-red-950 text-neutral-300 p-0 m-0">
-    <header id="home" class="lg:px-16 px-4 bg-neutral-900 flex flex-wrap items-center py-4 shadow-md">
+<body class="relative bg-gradient-to-b from-red-900 to-black bg-neutral-900 text-neutral-300 p-0 m-0 ">
+    <header id="home" class=" fixed top-0 left-0 right-0 lg:px-16 px-4 bg-neutral-900 flex flex-wrap items-center shadow-md bg-opacity-75 h-20">
         <div class="flex-1 flex justify-between items-center">
-            <a href="#" class="text-xl">Portfolio</a>
+            <a href="#" class="text-3xl">Sarah Duluc</a>
         </div>
         <label for="menu-toggle" class="pointer-cursor md:hidden block">
           <svg class="fill-current text-neutral-300"
@@ -36,32 +37,30 @@
             </nav>
         </div>
     </header>
-
-
-  <!-- Section Présentation -->
-  <section id="presentation" class="py-20 ">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-semibold mb-4">Présentation</h2>
-      <p class="text-lg leading-relaxed">
-        Bonjour ! Je m'appelle Sarah Duluc.<br>Actuellement étudiante en seconde année à l'IUT de informatique de Gradignan, je suis tout particulièrement intéressée par le développement d'applications (Java, C#) et le développement web, front end.
-        J'aimerais lier mon attrait pour la création digitale à un sujet d'alternance en 2025-2026.
-        Créative de nature, j'apprécie dessiner ou visiter des musées. Mais je préfère par dessus tout écouter de la musique et assister à des concerts. <br>
-        N'hésitez pas à me contacter si mon profil vous intéresse !</p>
+    
+  <section id="presentation" class="mt-32 flex justify-center py-210 flex justify-between items-center">
+    <div class="max-w-7xl mx-auto text-center">
+        <!-- Partie texte à gauche -->
+        <div class=" overflow-hidden p-4">
+          <h2 class="text-3xl font-semibold mb-8 text-center">Présentation  </h2>
+            <p class="text-lg leading-relaxed text-neutral-700 bg-white rounded-lg shadow-md p-4">
+                Bonjour ! Je m'appelle Sarah Duluc.<br>Actuellement étudiante en seconde année à l'IUT de informatique de Gradignan, je suis tout particulièrement intéressée par le développement d'applications (Java, C#) et le développement web, front end.
+                J'aimerais lier mon attrait pour la création digitale à un sujet d'alternance en 2025-2026.
+                Créative de nature, j'apprécie dessiner ou visiter des musées. Mais je préfère par dessus tout écouter de la musique et assister à des concerts. <br>
+                N'hésitez pas à me contacter si mon profil vous intéresse !
+              </p>
+        </div>
     </div>
-  </section>
+</section>
+
+
 
   <!-- Section Projets -->
-  <div class="container mx-auto py-4">
-
-
-    <script src="javasript.js"></script>
-    
-
-
-  <section id="projets" class="py-20 pt-10 border-t-2 border-black">
+  <script src="javasript.js"></script>
+  <section id="projets" class="mt-32 pb-20 flex justify-center">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-3xl font-semibold mb-8 text-center">Projets</h2>
-      <div id="myBtnContainer">
+      <div class="mb-4 flex justify-center text-neutral-900 rounded-lg " id="myBtnContainer">
         <button class="btn active" onclick="filterSelection('all')"> Tout voir</button>
         <button class="btn" onclick="filterSelection('java')"> Java</button>
         <button class="btn" onclick="filterSelection('csharp')"> C#</button>
@@ -69,122 +68,94 @@
         <button class="btn" onclick="filterSelection('html')"> HTML</button>
         <button class="btn" onclick="filterSelection('css')"> CSS</button>
         <button class="btn" onclick="filterSelection('C')"> C</button>
-        <button class="btn" onclick="filterSelection('bd')"> BD</button>
+        <button class="btn" onclick="filterSelection('bd')"> Bases de données</button>
         <button class="btn" onclick="filterSelection('python')"> Python</button>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
 
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Projet 1 -->
-        <div class="filterDiv JavaScript html css bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="img/js.png" alt="Site web interractif" class="w-full h-56 object-cover">
-          <div class="p-6">
-            <a href="projJS.html" class="text-blue-500 hover:underline">Voir plus ></a>
-          </div>
-        </div>
-        <!-- Projet 2 -->
         <div class="filterDiv java bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="img/towa.png" alt="Jeu de plateau et IA" class="w-full h-56 object-cover">
+          <img src="img/towaplateau.png" alt="Jeu de plateau et IA" class="w-full h-56 object-cover">
           <div class="p-6">
-            <p class="text-gray-600 mb-4">
-              Towa est un jeu de plateau où j'ai du implémenter les règles et contraintes afin de rendre le jeu jouable.
-              Dans une seconde partie, nous avons du coder en binome une IA pour jouer à notre place. Tous les soirs, une compétition entre les IA des étudiants et enseignants était réalisée et le lendemain matin nous avions les résultats. J'ai aimé ce projet pour son aspect compétitif mais aussi parce que nous avons pu développer en Java et avons appris à automatiser une partie avec nos IA.
-            </p>
+            <p class="text-neutral-900 text-2xl">Jeu de plateau - Towa</p>
             <a href="towa.html" class="text-blue-500 hover:underline">Voir plus ></a>
           </div>
         </div>
         <!-- Projet 3 -->
-        <div class="filterDiv csharp bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="img/unideck.png" alt="Projet 3" class="w-full h-56 object-cover">
+        <div class="filterDiv JavaScript html css bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="img/phosPixelWar.png" alt="Site web interractif" class="w-full h-56 object-cover">
           <div class="p-6">
-            <p class="text-gray-600 mb-4">
-              Ce projet réalisé en binome se centrait sur le développement d'une application de jeu de cartes. Nous avons pu consolider nos connaissances en programmation orientée objet et nous avons rendu, à la fin un guide de conception détaillant ce que nous avions fait. Ce projet était assez différent des autres puisqu'il était plutot centré sur l'explication du code.
-            </p>
-            <a href="unideck.html" class="text-blue-500 hover:underline">Voir plus ></a>
+            <p class="text-neutral-900 text-2xl">Site web interractif et API</p>
+            <a href="projJS.html" class="text-blue-500 hover:underline">Voir plus ></a>
           </div>
         </div>
         <!-- Projet 4-->
         <div class="filterDiv csharp python bd bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="img/js.png" alt="Site web interractif" class="w-full h-56 object-cover">
+          <img src="img/finS2.png" alt="Site web interractif" class="w-full h-56 object-cover">
           <div class="p-6">
-            <p class="text-gray-600 mb-4">
-              projetfins2
-            </p>
+            <p class="text-neutral-900 text-2xl">Visualisation de données</p>
             <a href="projetS2.html" class="text-blue-500 hover:underline">Voir plus ></a>
           </div>
         </div>
         <!-- Projet 5-->
         <div class="filterDiv html JavaScript css bd bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="img/js.png" alt="Site web interractif" class="w-full h-56 object-cover">
+          <img src="img/RobotLeague.png" alt="Site web interractif" class="w-full h-56 object-cover">
           <div class="p-6">
-            <p class="text-gray-600 mb-4">
-              projet fin s3
-            </p>
+            <p class="text-neutral-900 text-2xl">Projet de fin de S3 - Symfony</p>
             <a href="projetS3.html" class="text-blue-500 hover:underline">Voir plus ></a>
           </div>
         </div>
         <!-- Projet 6-->
         <div class="filterDiv java bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="img/js.png" alt="Site web interractif" class="w-full h-56 object-cover">
+          <img src="img/chantier.png" alt="Site web interractif" class="w-full h-56 object-cover">
           <div class="p-6">
-            <p class="text-gray-600 mb-4">
-              labyrinthe 
-            </p>
+            <p class="text-neutral-900 text-2xl">Jeu vidéo - Labyrinthe</p>
             <a href="labyrinthe.html" class="text-blue-500 hover:underline">Voir plus ></a>
           </div>
         </div>
         <!-- Projet 7-->
         <div class="filterDiv C bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="img/js.png" alt="Site web interractif" class="w-full h-56 object-cover">
+          <img src="img/dummyArray.png" alt="Site web interractif" class="w-full h-56 object-cover">
           <div class="p-6">
-            <p class="text-gray-600 mb-4">
-              minishell            
-            </p>
-            <a href="minishell.html" class="text-blue-500 hover:underline">Voir plus ></a>
+            <p class="text-neutral-900 text-2xl">Benchmark - Stock de valeurs</p>
+            <a href="dummyarray.html" class="text-blue-500 hover:underline">Voir plus ></a>
           </div>
         </div>
         <!-- Projet 8-->
         <div class="filterDiv python bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="img/js.png" alt="Site web interractif" class="w-full h-56 object-cover">
+          <img src="img/chiffrement.png" alt="Site web interractif" class="w-full h-56 object-cover">
           <div class="p-6">
-            <p class="text-gray-600 mb-4">
-              minirsa            
-            </p>
+            <p class="text-neutral-900 text-2xl">Cryptographie - Chiffrement RSA</p>
             <a href="minirsa.html" class="text-blue-500 hover:underline">Voir plus ></a>
           </div>
         </div>
-
-
       </div>
     </div>
   </section>
-  </div>
 
-  <!-- Section Formation -->
-  <section id="formation" class="py-20 pt-10 border-t-2 border-black">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-semibold mb-8 text-center">Formation</h2>
-      <div class="space-y-6">
-        <!-- Formation 1 -->
-        <div class="flex items-start">
-          <div class="ml-4">
-            <h3 class="text-xl font-semibold">BUT informatique</h3>
-            <p class="text-neutral-400">Université de Bordeaux - IUT de Gradignan • 2023-2026</p>
-            <p class="mt-2">
-              Durant ma formation, j'étudie principalement le développement d'applications. Nous avons déjà étudié et pratiqué avec du Java principalement mais aussi du C#. Nous utilisons aussi Python et apprenons le web, en deuxième année nous avons travaillé avec Symfony par exemple.
-              Nous n'avons pas seulement des enseignements liés à l'informatique, nous avons aussi des cours de gestion où nous apprenons la méthodologie SCRUM, des cours d'anglais, de communication ou de mathématiques. Nous disposons également d'un cursus international, dont je fais partie. Cette classe nous permet d'avoir des enseignements en anglais et de partir à l'étranger durant nos études.
-              D'Avril à Juin 2025, je pars avec d'autres étudiants au Japon afin d'y réaliser mon stage.
-            </p>
-          </div>
+
+  <div class="mt-32 max-w-7xl mx-auto text-center">
+    <div class=" overflow-hidden p-4">
+      <h2 id="formation" class="text-3xl font-semibold mb-8 text-center">Formation  </h2>
+      <div class="bg-white rounded-lg shadow-md p-4">
+        <p class="text-center text-lg font-semibold leading-relaxed text-neutral-700 ">BUT Informatique
+          <p class="text-neutral-500">Université de Bordeaux - IUT de Gradignan • 2023-2026
+      <br><br>
+      <p class="text-lg leading-relaxed text-neutral-700 ">
+
+          Durant ma formation, j'étudie principalement le développement d'applications. Nous avons déjà étudié et pratiqué avec du Java principalement mais aussi du C#. Nous utilisons aussi Python et apprenons le web, en deuxième année nous avons travaillé avec Symfony par exemple.
+          Nous n'avons pas seulement des enseignements liés à l'informatique, nous avons aussi des cours de gestion où nous apprenons la méthodologie SCRUM, des cours d'anglais, de communication ou de mathématiques. Nous disposons également d'un cursus international, dont je fais partie. Cette classe nous permet d'avoir des enseignements en anglais et de partir à l'étranger durant nos études.
+          D'Avril à Juin 2025, je pars avec d'autres étudiants au Japon afin d'y réaliser mon stage.
+          </p>
+        </p>
         </div>
-      </div>
     </div>
-  </section>
+</div>
 
  
 
 <!-- Section Contact -->
-<section id="contact" class="py-15 pb-10 bg-neutral-900 pt-10 border-t-2 border-neutral-900">
+<section id="contact" class="mt-32 py-15 pb-10 bg-neutral-900 pt-10 border-t-2 border-neutral-900 bg-opacity-35">
     <div class="max-w-4xl mx-auto px-4 ">
       <h2 class="text-3xl font-semibold mb-8 text-center">Contact</h2>
       <div class="bg-gray-100 shadow-md rounded-lg px-8 py-6">
@@ -210,11 +181,23 @@
             <p class="text-gray-700">+33 7 88 59 96 24</p>
           </div>
         </div>
+        <div class="flex items-center">
+          <div class="flex-shrink-0 text-green-500">
+              <path d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm2 0v10h8V5H4zm7 7H5v-1h6v1z" />
+            </svg>
+          </div>
+          <div class="ml-4 mt-4">
+            <a href="https://www.linkedin.com/in/sduluc/" class="text-lg font-medium text-gray-900">LinkedIn</a>
+          </div>
+        </div>
       </div>
       <p class="text-center text-gray-500 text-xs mt-4">
       </p>
     </div>
   </section>
+
+  
+  
   
 
 

@@ -5,6 +5,7 @@
 
 .container {
     overflow: hidden;
+    
   }
   
   .filterDiv {
@@ -12,6 +13,7 @@
     text-align: center;
     margin: 2px;
     display: none; /* Hidden by default */
+    
   }
   
   /* The "show" class is added to the filtered elements */
@@ -24,7 +26,9 @@
     border: none;
     outline: none;
     padding: 12px 16px;
-    background-color: #f1f1f1;
+    background-color: white;
+    border-radius: 15px;
+    margin: 2px;
     cursor: pointer;
   }
   
@@ -35,6 +39,6 @@
   
   /* Add a dark background to the active button */
   .btn.active {
-    background-color: #666;
-    color: white;
+    background-color: #211721;
+    color: #D4D4D4;
   }

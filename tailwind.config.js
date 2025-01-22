@@ -4,7 +4,11 @@ module.exports = {
     "./public/index.html",   // Add paths to your HTML or template files
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        playFair: ['Playfair Display', 'serif'],
+      }
+    },
   },
   plugins: [],
 };
